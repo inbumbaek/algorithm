@@ -27,6 +27,21 @@ class SLL {
         }
         return this.head.value;
     }
+
+    display() {
+        let current = this.head;
+        let result = '';
+
+        while (current !== null) {
+            result += current.value;
+            if (current.next !== null) {
+                result += ' -> ';
+            }
+            current = current.next;
+        }
+
+        return result;
+    }
 }
 
 
@@ -34,10 +49,9 @@ class SLL {
 var SLL1 = new SLL();
 
 
-// SLL1.addFront(18);
-// console.log(SLL1)
-// // SLL1.addFront(5);
-// // SLL1.addFront(73);
+SLL1.addFront(76);
+SLL1.addFront(2);
+console.log(SLL1)
 
 // SLL1.removeFront();
 // console.log(SLL1)
